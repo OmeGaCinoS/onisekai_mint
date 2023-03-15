@@ -1,0 +1,91 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@font-face {
+  font-family: "myriadpro-regular";
+  src: url("../fonts/MYRIADPRO-REGULAR.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/new/Helvetica.ttf");
+}
+
+@font-face {
+  font-family: "freeSansBold";
+  src: url("../fonts/new/FreeSansBold.ttf");
+}
+
+@layer base {
+  :root {
+    --light-white: 26 15% 91%; /* #ebe7e4 */
+    --brand-gray: 40 1% 46%; /* #777674 */
+    --accent-red: 0 86% 56%; /* #ef2d2d */
+    --accent-light-red: 353 50% 48%; /* #b83d4c */
+    --ferozi: 186 84% 54%; /* #28d7ec */
+  }
+  body {
+    font-family: "Bebas Neue", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    background: #ebe7e4;
+    background-image: url("/whole_bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .headerLinkBtn {
+    box-shadow: 0px 4px 10px black;
+  }
+  body:has(.hide-scroll) {
+    overflow: hidden;
+  }
+  .crystal_animation {
+    animation: crystal 8s linear infinite alternate;
+  }
+  .crystal_animation1 {
+    animation: crystal1 8s linear infinite alternate;
+  }
+  @keyframes crystal {
+    0% {
+      transform: translate(0);
+    }
+    25% {
+      transform: translate(10px, 10px);
+    }
+    50% {
+      transform: translate(-10px, 20px);
+    }
+    75% {
+      transform: translate(0px, 10px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+  @keyframes crystal1 {
+    0% {
+      transform: translate(0);
+    }
+    25% {
+      transform: translate(0px, 10px);
+    }
+    50% {
+      transform: translate(0px, 0px);
+    }
+    75% {
+      transform: translate(-10px, 20px);
+    }
+    100% {
+      transform: translate(10px, 10px);
+    }
+  }
+}
